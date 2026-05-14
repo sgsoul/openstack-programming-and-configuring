@@ -21,10 +21,10 @@
 
 Через Nova API создается новый рабочий инстанс:
 
-<details>
-<summary> для этого сначала узнаются ID необходимых ресурсов: </summary>
-<img width="1083" height="749" alt="image" src="https://github.com/user-attachments/assets/7510b0b6-7a65-44d3-a770-44b499154851" />
-</details>
+> <details>
+> <summary> для этого сначала узнаются ID необходимых ресурсов: </summary>
+> <img width="1083" height="749" alt="image" src="https://github.com/user-attachments/assets/7510b0b6-7a65-44d3-a770-44b499154851" />
+> </details>
 
 <img width="1504" height="515" alt="image" src="https://github.com/user-attachments/assets/49929130-5525-4d05-b8fc-2cca3e405f59" />
 
