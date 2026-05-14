@@ -21,8 +21,10 @@
 
 Через Nova API создается новый рабочий инстанс:
 
-> для этого сначала узнаются ID необходимых ресурсов:
-> <img width="1083" height="749" alt="image" src="https://github.com/user-attachments/assets/7510b0b6-7a65-44d3-a770-44b499154851" />
+<details>
+<summary> для этого сначала узнаются ID необходимых ресурсов: </summary>
+<img width="1083" height="749" alt="image" src="https://github.com/user-attachments/assets/7510b0b6-7a65-44d3-a770-44b499154851" />
+</details>
 
 <img width="1504" height="515" alt="image" src="https://github.com/user-attachments/assets/49929130-5525-4d05-b8fc-2cca3e405f59" />
 
@@ -33,11 +35,13 @@
 > в силу свободных 30ГБ на хосте, было принято грустное волевое решение ставить ceph на узел с OpenStack и поднимать всего 1 диск =( потенциал.не раскрыт
 
 Установливается [`cephadm`](https://docs.ceph.com/en/latest/cephadm/install/):
+
 <img width="864" height="525" alt="image" src="https://github.com/user-attachments/assets/aac224c9-0dd4-4e0a-bbbd-332eeef88925" />
 
 <img width="1328" height="196" alt="image" src="https://github.com/user-attachments/assets/cd4acfa5-1cb0-41b5-a381-bb9acc298ffb" />
 
-Ставятся необходимые пакеты и утилита ceph-common. Подключается репо версии `Squid`:
+Ставятся необходимые пакеты и утилита ceph-common. Подключается репо релиза `squid`:
+
 <img width="1317" height="638" alt="image" src="https://github.com/user-attachments/assets/9f3363a9-c283-4863-a647-a914fabc7f0f" />
 
 <img width="1791" height="428" alt="image" src="https://github.com/user-attachments/assets/96742884-ec47-43b4-825c-bb980abb99ca" />
@@ -78,7 +82,7 @@
 
 <img width="1577" height="592" alt="image" src="https://github.com/user-attachments/assets/ea600040-cf11-429f-9f91-bc54048ed672" />
 
-В конфигурационном файле cinder `./etc/cinder/cinder.conf` указывается `enabled_backends = rbd` - для того, чтобы Ceph использовал RBD как backend для Cinder, те в качестве используемого хранилища. Добавляется секцию [rbd], где настроен Ceph‑backend - драйвер RBD, пул volumes, путь к ceph.conf, пользователь cinder, его keyring и параметры работы с томами (клонирование снапшотов, размер чанка, таймаут подключения):
+В конфигурационном файле cinder `./etc/cinder/cinder.conf` указывается `enabled_backends = rbd` - для того, чтобы Ceph использовал RBD как backend для Cinder, те в качестве используемого хранилища. Добавляется секция [rbd], где настроен Ceph‑backend - драйвер RBD, пул volumes, путь к ceph.conf, пользователь cinder, его keyring и параметры работы с томами (клонирование снапшотов, размер чанка, таймаут подключения):
 
 <img width="1164" height="295" alt="image" src="https://github.com/user-attachments/assets/dbcbc055-2464-4049-a5db-914208926dd9" />
 <img width="1302" height="471" alt="image" src="https://github.com/user-attachments/assets/2bf19163-7715-4c73-aa69-98c079fcc687" />
